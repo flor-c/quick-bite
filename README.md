@@ -2,7 +2,7 @@
 Mini food ordering app built with HTML, CSS and JavaScript
 
 ## Live Demo
-https://your-netlify-link.netlify.app
+[https://your-netlify-link.netlify.app](https://quickbbite.netlify.app/)
 
 ## Features
 - Add items to cart
