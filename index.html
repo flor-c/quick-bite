@@ -6,52 +6,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>QuickBite Menu</title>
   <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
   <header>
-    <h1>QuickBite</h1>
+    <h1>Quick<span>Bite</span></h1>
     <p>Fresh food, fast.</p>
+
+    <button id="cart-toggle" class="cart-toggle" aria-label="Open cart">
+      <svg class="cart-icon" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M7 4H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        <path d="M5 4L7.2 14.4C7.3 14.8 7.6 15 8 15H18.4C18.8 15 19.1 14.7 19.2 14.3L21 7H6.2" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <circle cx="9" cy="19" r="1.5" fill="currentColor" />
+        <circle cx="18" cy="19" r="1.5" fill="currentColor" />
+      </svg>
+      <span id="cart-count" class="cart-count">0</span>
+    </button>
   </header>
+
   <div class="page-layout">
     <section id="menu"></section>
+  </div>
 
-    <section id="cart">
-      <h2>Your Cart</h2>
-      <ul id="cart-items"></ul>
-      <p>Total: $<span id="total">0</span></p>
-      <button id="checkout">Checkout</button>
-      <button id="clear-cart">Clear Cart</button>
-    </section>
+  <div id="toast-container" class="toast-container"></div>
+  <div id="cart-overlay" class="cart-overlay hidden"></div>
 
-    <div id="checkout-modal" class="modal hidden">
-      <div class="modal-content">
-        <button id="close-modal">&times;</button>
 
-        <h2>Checkout</h2>
+  <section id="cart" class="cart-panel">
+    <button id="close-cart" class="close-cart" aria-label="Close cart">&times;</button>
 
-        <form id="checkout-form">
-          <label for="customer-name">Name</label>
-          <input type="text" id="customer-name" name="customer-name" />
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <p>Total: $<span id="total">0</span></p>
+    <button id="checkout">Checkout</button>
+    <button id="clear-cart">Clear Cart</button>
+  </section>
+  <div id="checkout-modal" class="modal hidden">
+    <div class="modal-content">
+      <button id="close-modal">&times;</button>
 
-          <label for="customer-address">Address</label>
-          <input type="text" id="customer-address" name="customer-address" />
+      <h2>Checkout</h2>
 
-          <label for="customer-phone">Phone</label>
-          <input type="text" id="customer-phone" name="customer-phone" />
+      <form id="checkout-form">
+        <label for="customer-name">Name</label>
+        <input type="text" id="customer-name" name="customer-name" />
 
-          <button type="submit">Place Order</button>
-        </form>
+        <label for="customer-address">Address</label>
+        <input type="text" id="customer-address" name="customer-address" />
 
-        <p id="checkout-message"></p>
-      </div>
+        <label for="customer-phone">Phone</label>
+        <input type="text" id="customer-phone" name="customer-phone" />
+
+        <button type="submit">Place Order</button>
+      </form>
+
+      <p id="checkout-message"></p>
     </div>
-
-    <div id="toast-container" class="toast-container"></div>
   </div>
 
 
-  <script src="script.js"></script>
+
+
+
+  <script src="script.js" defer></script>
 </body>
 
 </html>
