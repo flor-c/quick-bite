@@ -205,6 +205,7 @@ checkoutButton.addEventListener("click", () => {
     return;
   }
 
+  closeCart();
   checkoutMessage.textContent = "";
   checkoutModal.classList.remove("hidden");
 
