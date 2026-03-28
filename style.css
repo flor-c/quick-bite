@@ -9,6 +9,9 @@ header {
   color: white;
   padding: 24px;
   text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 header h1 {
