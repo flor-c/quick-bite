@@ -350,11 +350,7 @@ cart-overlay {
 }
 
 @media (max-width: 768px) {
-  .page-layout {
-    grid-template-columns: 1fr;
-  }
-
-  #cart {
-    position: static;
+  button {
+    font-size: 16px;
   }
 }
